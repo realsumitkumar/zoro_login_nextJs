@@ -1,0 +1,102 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f8fa;
+}
+
+.card {
+  width: 350px;
+  height: 600px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  animation: slideIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Added this line */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  text-align: center;
+  margin-top: -35px;
+  margin-bottom: 15rem;
+  font-size: 4rem;
+  text-align: center;
+  color: #0f4a5c;
+  z-index: -1;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f4a5c;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1da1f2;
+}
+
+.button {
+  background-color: #0f4a5c;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0c8de4;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #dc3545;
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  --bs-gutter-x: 17.5rem;
+}
+
+.success {
+  color: green;
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 90%;
+  }
+}
